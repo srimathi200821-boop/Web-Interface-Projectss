@@ -1,0 +1,98 @@
+:root {
+  color-scheme: light;
+
+  /* Palette: #051F20  #0B2B26  #163832  #235347  #8EB69B  #DAF1DE */
+  --page: #daf1de;
+  --page-glow: rgba(142, 182, 155, 0.45);
+  --surface: #ffffff;
+  --surface-2: #eef8f0;
+  --ink: #051f20;
+  --text: #163832;
+  --muted: #3f665a;
+  --line: #bcd9c3;
+  --on-brand: #ffffff;
+
+  --blue-50: #e3f3e6;
+  --blue-100: #c4e3cc;
+  --blue-600: #235347;
+  --blue-700: #163832;
+
+  --nav-bg: #051f20;
+  --nav-text: #a9c9b4;
+  --nav-accent: #8eb69b;
+  --hero-from: #051f20;
+  --hero-to: #235347;
+  --footer-bg: #051f20;
+
+  --green: #235347;
+  --green-bg: #cbe8d2;
+  --amber: #a15c07;
+  --amber-bg: #fdf0cf;
+  --red: #b42318;
+  --red-bg: #fde4e1;
+
+  --radius: 10px;
+  --shadow: 0 1px 2px rgba(5, 31, 32, 0.08), 0 4px 14px rgba(5, 31, 32, 0.08);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --page: #051f20;
+  --page-glow: rgba(35, 83, 71, 0.55);
+  --surface: #0b2b26;
+  --surface-2: #0f3530;
+  --ink: #daf1de;
+  --text: #bfdcc8;
+  --muted: #8eb69b;
+  --line: #1e463c;
+  --on-brand: #051f20;
+
+  --blue-50: #163832;
+  --blue-100: #235347;
+  --blue-600: #8eb69b;
+  --blue-700: #a8cfb4;
+
+  --nav-bg: #0b2b26;
+  --nav-text: #a9c9b4;
+  --nav-accent: #8eb69b;
+  --hero-from: #0b2b26;
+  --hero-to: #235347;
+  --footer-bg: #031415;
+
+  --green: #8eb69b;
+  --green-bg: #163832;
+  --amber: #fbbf24;
+  --amber-bg: #372a0c;
+  --red: #f87171;
+  --red-bg: #3a1616;
+
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.45), 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--text);
+  background: radial-gradient(900px 520px at 0% 0%, var(--page-glow), transparent 65%), var(--page);
+  background-repeat: no-repeat;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.2s, color 0.2s;
+}
+
+h1, h2, h3, p, ul, ol, dl, dd { margin: 0; }
+h1, h2, h3 { color: var(--ink); line-height: 1.2; }
+ul, ol { padding: 0; list-style: none; }
+
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+button:disabled { cursor: not-allowed; }
+
+:focus-visible { outline: 2px solid var(--blue-600); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; scroll-behavior: auto !important; }
+}
